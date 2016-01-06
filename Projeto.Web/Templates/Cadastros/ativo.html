@@ -1,0 +1,37 @@
+﻿<div class="row">
+    <div class="col-md-8">
+        <table class="table table-condensed table-hover">
+            <tr>
+                <th>NomeAtivo</th>
+                <th>TipoAtivo</th>
+                <th>DescricaoAtivo</th>
+                <th>DataAquisicaoAtivo</th>
+            </tr>
+            <tr ng-repeat="ativo in ativos">
+                <td>{{ativo.nomeAtivo}}</td>
+                <td>{{ativo.tipoAtivo}}</td>
+                <td>{{ativo.descricaoAtivo}}</td>
+                <td>{{ativo.dataAquisicaoAtivo}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<form>
+    
+    <label for="nomeAtivo">Nome:</label>
+    <input type="text" ng-model="ativo.nomeAtivo" id="nomeAtivo" required />
+
+    <label  for="tipoAtivo">Tipo:</label>
+    <input type="text" ng-model="ativo.tipoAtivo" id="tipoAtivo" required />
+
+    <label for="descricaoAtivo">Descrição:</label>
+    <input type="text" ng-model="ativo.descricaoAtivo" id="descricaoAtivo" required />
+
+    <label for="dataAquisicaoAtivo">Data de aquisição:</label>
+    <input type="date" ng-model="ativo.dataAquisicaoAtivo" id="dataAquisicaoAtivo" required />
+
+    <button type="submit">Cadastrar</button>
+
+</form>
